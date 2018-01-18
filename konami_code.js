@@ -9,6 +9,22 @@ function init() {
   let kCodeIndex = 0;
   
   page.addEventListener('keydown', function(e) {
+    if (e.which === code[kCodeIndex]) {
+      kCodeIndex++;
+      
+      if (kCodeIndex === code.length) {
+        alert("Hurray!");
+        
+        kCodeIndex = 0;
+      }
+    } else {
+      kCodeIndex = 0;
+    }
+    
+  });
+}
+    
+    /* 
     if (e.which != code[kCodeIndex]) {
       kCodeIndex = 0;  // reset code index if keypress doesn't match necessary key
     }
@@ -22,6 +38,6 @@ function init() {
       kCodeIndex = 0;
     }
   });
-}
+} */
 
 init ();
