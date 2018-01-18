@@ -9,7 +9,10 @@ function init() {
   let kCodeIndex = 0;
   
   page.addEventListener('keydown', function(e) {
-    if (e.which === code[kCodeIndex]) {
+    
+    const key = parseInt(e.detail || e.which);
+    
+    if (key === code[kCodeIndex]) {
       kCodeIndex++;
       
       if (kCodeIndex === code.length) {
